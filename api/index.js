@@ -43,13 +43,13 @@ fastify.get('/api/players_pendings', async () => {
         [
             {"id_match": 1 , "namePalyer":"Chiara"  , "mailPlayer":"chiara@gmail.com", "QuestionTotal": 10 , "AnswerOk" : 8 , "timeEx" : 70 },
             {"id_match": 1 , "namePalyer":"Maria"  , "mailPlayer":"maria@gmail.com", "QuestionTotal": 10 , "AnswerOk" : 6 , "timeEx" : 60 },
-            {"id_match": 1 , "namePalyer":"Chiara"  , "mailPlayer":"chiara@gmail.com", "QuestionTotal": 10 , "AnswerOk" : 5 , "timeEx" : 80 },
-            {"id_match": 1 , "namePalyer":"Chiara"  , "mailPlayer":"chiara@gmail.com", "QuestionTotal": 10 , "AnswerOk" : 3 , "timeEx" : 110 }
+            {"id_match": 1 , "namePalyer":"Angela"  , "mailPlayer":"angela@gmail.com", "QuestionTotal": 10 , "AnswerOk" : 6 , "timeEx" : 80 },
+            {"id_match": 1 , "namePalyer":"Francesco"  , "mailPlayer":"francesco@gmail.com", "QuestionTotal": 10 , "AnswerOk" : 3 , "timeEx" : 110 }
         ]
     )
 });
 
-fastify.put('/api/players', async () => {
+fastify.put('/api/match_player', async () => {
     return {
         status: 'ok add palyer'
     }
