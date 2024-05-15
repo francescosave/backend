@@ -1,6 +1,9 @@
 const fastify = require('fastify')();
 fastify.register(require('@fastify/websocket'));
 
+
+/*
+// sample callabck use
 fastify.get('/api/', (request, reply) => {
     reply.send({
         message: {
@@ -29,9 +32,23 @@ fastify.get('/api/hello-ws', { websocket: true }, (connection, req) => {
         connection.socket.send('Hello Fastify WebSockets');
     });
 });
+*/
+
+fastify.get('/api/', async () => {
+    return {
+        status: 'ok api'
+    }
+});
+
+fastify.get('/api/credits', async () => {
+    return {
+        status: 'ok credits'
+    }
+});
+
 
 fastify.listen({ port: 3000 }, (err, address) => {
-    if(err) {
+    if (err) {
         console.error(err);
         process.exit(1);
     }
