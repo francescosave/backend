@@ -1,31 +1,7 @@
 const fastify = require('fastify')();
-fastify.register(require('@fastify/websocket'));
-
+//fastify.register(require('@fastify/websocket'));
 
 /*
-// sample callabck use
-fastify.get('/api/', (request, reply) => {
-    reply.send({
-        message: {
-            Components : ['Angela','Chiara','Maria','Francesco'],
-            github : 'https://github.com/tomorrowdevs-projects/tech-jobs-fair-hackathon-bari-2024-team5/'
-
-        }
-    });
-});
-
-
-fastify.get('/api/credits', (request, reply) => {
-    reply.send({
-        message: {
-            Components : ['Angela','Chiara','Maria','Francesco'],
-            github : 'https://github.com/tomorrowdevs-projects/tech-jobs-fair-hackathon-bari-2024-team5/',
-            stack : 'Html CSS js vanilla & fastify'
-
-        }
-    });
-});
-
 
 fastify.get('/api/hello-ws', { websocket: true }, (connection, req) => {
     connection.socket.on('message', message => {
@@ -36,7 +12,11 @@ fastify.get('/api/hello-ws', { websocket: true }, (connection, req) => {
 
 fastify.get('/api/', async () => {
     return {
-        status: 'ok api'
+        message: {
+            Components: ['Angela', 'Chiara', 'Maria', 'Francesco'],
+            github: 'https://github.com/tomorrowdevs-projects/tech-jobs-fair-hackathon-bari-2024-team5/'
+
+        }
     }
 });
 
