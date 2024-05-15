@@ -1,7 +1,7 @@
 const fastify = require('fastify')();
 fastify.register(require('@fastify/websocket'));
 
-fastify.get('/credits', (request, reply) => {
+fastify.get('/api/credits', (request, reply) => {
     reply.send({
         message: {
             Components : ['Angela','Chiara','Maria','Francesco'],
@@ -12,7 +12,7 @@ fastify.get('/credits', (request, reply) => {
     });
 });
  
-fastify.get('/', (request, reply) => {
+fastify.get('/api/', (request, reply) => {
     reply.send({
         message: {
             Components : ['Angela','Chiara','Maria','Francesco'],
@@ -22,7 +22,7 @@ fastify.get('/', (request, reply) => {
     });
 });
 
-fastify.get('/hello-ws', { websocket: true }, (connection, req) => {
+fastify.get('/api/hello-ws', { websocket: true }, (connection, req) => {
     connection.socket.on('message', message => {
         connection.socket.send('Hello Fastify WebSockets');
     });
