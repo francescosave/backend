@@ -1,5 +1,19 @@
-const fastify = require('fastify')();
+//const fastify = require('fastify')();
 //fastify.register(require('@fastify/websocket'));
+
+import Fastify from 'fastify'
+const fastify = Fastify({
+  logger: true
+})
+
+
+import cors from '@fastify/cors'
+
+
+await fastify.register(cors, { 
+  // put your options here
+})
+
 
 /*
 
