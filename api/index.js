@@ -1,6 +1,3 @@
-//const fastify = require('fastify')();
-//fastify.register(require('@fastify/websocket'));
-
 import Fastify from 'fastify'
 const fastify = Fastify({
   logger: true
@@ -14,18 +11,9 @@ await fastify.register(cors, {
   // put your options here
 })
 
-
-/*
-
-fastify.get('/api/hello-ws', { websocket: true }, (connection, req) => {
-    connection.socket.on('message', message => {
-        connection.socket.send('Hello Fastify WebSockets');
-    });
-});
-*/
-
 fastify.get('/', async () => {
-    return ('Benvenuto in Backend TJS Team5');
+    //return ('Benvenuto in Backend TJS Team5');
+    return getTeam();
 });
 
 fastify.get('/api/', async () => {
