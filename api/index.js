@@ -10,6 +10,10 @@ fastify.get('/api/hello-ws', { websocket: true }, (connection, req) => {
 });
 */
 
+fastify.get('/', async () => {
+    return ('<h1>Benvenuto in Backend</h1>')
+});
+
 fastify.get('/api/', async () => {
     return {
         message: {
