@@ -1,7 +1,7 @@
 const fastify = require('fastify')();
 fastify.register(require('@fastify/websocket'));
 
-fastify.get('/api/credits', (request, reply) => {
+fastify.get('/api/credits/', (request, reply) => {
     reply.send({
         message: {
             Components : ['Angela','Chiara','Maria','Francesco'],
