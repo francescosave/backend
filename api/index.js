@@ -11,7 +11,7 @@ fastify.get('/api/hello-ws', { websocket: true }, (connection, req) => {
 */
 
 fastify.get('/', async () => {
-    return ('Benvenuto in Backend')
+    return ('Benvenuto in Backend TJS Team5');
 });
 
 fastify.get('/api/', async () => {
@@ -24,9 +24,27 @@ fastify.get('/api/', async () => {
     }
 });
 
+
 fastify.get('/api/credits', async () => {
     return {
-        status: 'ok credits'
+        message: {
+            Components: ['Angela', 'Chiara', 'Maria', 'Francesco'],
+            github: 'https://github.com/tomorrowdevs-projects/tech-jobs-fair-hackathon-bari-2024-team5/'
+
+        }
+    }
+});
+
+
+fastify.get('/api/players_pendings', async () => {
+    return {
+        status: 'ok'
+    }
+});
+
+fastify.put('/api/players', async () => {
+    return {
+        status: 'ok add palyer'
     }
 });
 
