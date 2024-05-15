@@ -1,6 +1,9 @@
 const fastify = require('fastify')();
 fastify.register(require('@fastify/websocket'));
 
+import cors from '@fastify/cors'
+
+fastify.register(cors, { });
 
 fastify.get('/api/', (request, reply) => {
     reply.send({
