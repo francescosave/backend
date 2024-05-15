@@ -25,7 +25,7 @@ fastify.get('/api/', async () => {
 });
 
 
-fastify.get('/credits', async () => {
+fastify.get('/api/credits', async () => {
     return {
         message: {
             Components: ['Angela', 'Chiara', 'Maria', 'Francesco'],
